@@ -1,0 +1,46 @@
+,Hit Rate,Cache Implementation,Cache Size
+0,0.761869,Direct Mapped,1024
+1,0.818901,Direct Mapped,2048
+2,0.94081,Direct Mapped,4096
+3,0.965613,Direct Mapped,8192
+4,0.979135,Direct Mapped,16384
+5,0.91078,Fully Associative (LRU),1024
+6,0.967183,Fully Associative (LRU),2048
+7,0.978661,Fully Associative (LRU),4096
+8,0.986652,Fully Associative (LRU),8192
+9,0.987981,Fully Associative (LRU),16384
+10,0.843866,2-Way Set Associative (LRU),1024
+11,0.926588,2-Way Set Associative (LRU),2048
+12,0.959168,2-Way Set Associative (LRU),4096
+13,0.982994,2-Way Set Associative (LRU),8192
+14,0.986537,2-Way Set Associative (LRU),16384
+15,0.855799,4-Way Set Associative (LRU),1024
+16,0.963462,4-Way Set Associative (LRU),2048
+17,0.976843,4-Way Set Associative (LRU),4096
+18,0.985052,4-Way Set Associative (LRU),8192
+19,0.987651,4-Way Set Associative (LRU),16384
+20,0.890113,8-Way Set Associative (LRU),1024
+21,0.96583,8-Way Set Associative (LRU),2048
+22,0.977892,8-Way Set Associative (LRU),4096
+23,0.985969,8-Way Set Associative (LRU),8192
+24,0.987767,8-Way Set Associative (LRU),16384
+25,0.889424,Fully Associative (FIFO),1024
+26,0.955768,Fully Associative (FIFO),2048
+27,0.972246,Fully Associative (FIFO),4096
+28,0.981678,Fully Associative (FIFO),8192
+29,0.985788,Fully Associative (FIFO),16384
+30,0.833859,2-Way Set Associative (FIFO),1024
+31,0.916713,2-Way Set Associative (FIFO),2048
+32,0.952816,2-Way Set Associative (FIFO),4096
+33,0.979904,2-Way Set Associative (FIFO),8192
+34,0.984864,2-Way Set Associative (FIFO),16384
+35,0.838727,4-Way Set Associative (FIFO),1024
+36,0.953149,4-Way Set Associative (FIFO),2048
+37,0.97086,4-Way Set Associative (FIFO),4096
+38,0.980573,4-Way Set Associative (FIFO),8192
+39,0.985583,4-Way Set Associative (FIFO),16384
+40,0.863259,8-Way Set Associative (FIFO),1024
+41,0.955435,8-Way Set Associative (FIFO),2048
+42,0.972272,8-Way Set Associative (FIFO),4096
+43,0.981197,8-Way Set Associative (FIFO),8192
+44,0.98564,8-Way Set Associative (FIFO),16384
