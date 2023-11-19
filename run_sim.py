@@ -131,6 +131,7 @@ def calc_implementation(data: pd.DataFrame, cache_implementation: str):
         data.loc[len(data)] = row
 
 def main():
+    
     cache_implementations = ["Direct Mapped",
                              "Fully Associative (LRU)",
                              "2-Way Set Associative (LRU)",
@@ -161,7 +162,7 @@ def main():
 
     sns.lineplot(data=data, x="Cache Size", y="Hit Rate", hue="Cache Implementation", palette="husl")
     
-    # Save the plot to a file (e.g., PNG, PDF, SVG))
+    # # Save the plot to a file (e.g., PNG, PDF, SVG))
     plt.savefig('CacheAnalysis.png', dpi=400)
     plt.savefig('CacheAnalysis.svg')
     plt.savefig('CacheAnalysis.pdf')
