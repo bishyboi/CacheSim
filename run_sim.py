@@ -22,6 +22,7 @@ lru_cmd = "./cache_sim_LRU".split()
 global fifo_cmd
 fifo_cmd = "./cache_sim_FIFO".split()
 
+
 def generate_input_message(cache_size: int, line_size: int, cache_implementation: int, filename: str) -> str:
     """
     Returns the input string for the cache_sim based on the cache size, line size, and cache implementation
@@ -54,6 +55,7 @@ def generate_input_message(cache_size: int, line_size: int, cache_implementation
 
     return write_message
 
+
 def get_output(command: list[int], input_message: str) -> str:
     """Takes the input parameters in the form of a string and runs a subprocess, returning the output
 
@@ -73,6 +75,7 @@ def get_output(command: list[int], input_message: str) -> str:
 
     return final_msg
 
+
 def get_hit_rate(output_msg) -> float:
     """Parses the hit rate from a get_output message
 
@@ -87,6 +90,7 @@ def get_hit_rate(output_msg) -> float:
     hit_rate = float(output_msg[hit_output+offset:])
 
     return hit_rate
+
 
 def calc_implementation(data: pd.DataFrame, cache_implementation: str):
     """Will add the hit rate entries for the cache implementation type onto the DataFrame
@@ -130,8 +134,9 @@ def calc_implementation(data: pd.DataFrame, cache_implementation: str):
 
         data.loc[len(data)] = row
 
+
 def main():
-    
+
     cache_implementations = ["Direct Mapped",
                              "Fully Associative (LRU)",
                              "2-Way Set Associative (LRU)",
@@ -142,7 +147,8 @@ def main():
                              "4-Way Set Associative (FIFO)",
                              "8-Way Set Associative (FIFO)"]
 
-    data = pd.DataFrame(columns=["Hit Rate", "Cache Implementation", "Cache Size"])
+    data = pd.DataFrame(
+        columns=["Hit Rate", "Cache Implementation", "Cache Size"])
 
     # Goes through each implementation type and calculates the hit rates for each cache size
     for implementation in cache_implementations:
@@ -151,7 +157,7 @@ def main():
     # Saving hit rate data into a .CSV file
     data.to_csv("HitRates.csv")
 
-    #** Plotting details
+    # ** Plotting details
     plt.figure(figsize=(16, 9))
     sns.set_theme()
 
@@ -160,8 +166,9 @@ def main():
     plt.xlabel('Cache Size (Bytes)')
     plt.ylabel('Hit Rates (Accuracy)')
 
-    sns.lineplot(data=data, x="Cache Size", y="Hit Rate", hue="Cache Implementation", palette="husl")
-    
+    sns.lineplot(data=data, x="Cache Size", y="Hit Rate",
+                 hue="Cache Implementation", palette="husl")
+
     # # Save the plot to a file (e.g., PNG, PDF, SVG))
     plt.savefig('CacheAnalysis.png', dpi=400)
     plt.savefig('CacheAnalysis.svg')
